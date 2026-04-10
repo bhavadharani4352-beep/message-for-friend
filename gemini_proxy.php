@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology Card</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        .card-instructions h3 {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .card-instructions p {
+            font-size: 0.7rem;
+        }
+
+        /* Add rounded corners to the card */
+        .folded-card {
+            border-radius: 15px;
+            overflow: hidden;
+            /* Increase card size */
+            width: 90%;
+            max-width: 600px;
+            height: auto;
+            min-height: 600px;
+            margin: 0 auto;
+        }
+
+        .card-front,
+        .card-back {
+            border-radius: 15px;
+            /* Ensure the card faces match the new size */
+            height: 100%;
+            min-height: 600px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-content {
+            overflow-y: auto;
+            padding: 15px;
+            /* Ensure text is visible without scrolling */
+            font-size: 1.15rem;
+            line-height: 1.4;
+        }
+
+        .card-content p {
+            margin-bottom: 15px;
+        }
+
+        /* Position the gift icon in the bottom right corner */
+        .gift-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 24px;
+            z-index: 10;
+            animation: bounce 2s infinite;
+        }
+
+        /* Adjust card container to handle larger card */
+        .card-container {
+            height: auto;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        /* Right-align the signature */
+        .signature {
+            text-align: right !important;
+            display: block !important;
+            width: 55% !important;
+        }
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 480px) {
+            .signature {
+                font-size: 1.15rem !important;
+                /* Smaller font size on mobile */
+                margin-left: auto !important;
+                /* Push to right side */
+                width: 60% !important;
+            }
+
+            .card-content {
+                font-size: 1.07rem;
+                /* Slightly smaller text on mobile */
+            }
+        }
+    </style>
+</head>
+
+<body class="page-3">
+    <div class="particles-container"></div>
+
+    <div class="hearts-container"></div>
+
+    <div class="card-container">
+
+        <div class="folded-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-instructions">
+                        <h3>A Special Message For You</h3>
+                        <p>Click the "Open Card" button below to read</p>
+                    </div>
+
+                    <!-- Add gift icon to bottom right corner of front card -->
+                    <div class="gift-icon">🎁</div>
+                </div>
+                <div class="card-back">
+                    <div class="card-content handwritten">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 😔<br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. ⏰<br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 🏫<br>
+                            Vestibulum sapien neque, sodales id eros non, aliquam ullamcorper nisl. Class aptent taciti 😉<br>
+                            Vestibulum sapien neque, sodales id eros non, aliquam ullamcorper nisl. 😁<br>
+                            Ut et elit libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 😆</p>
+
+                        <p>How can I forget your gift? 🎁<br>
+                            It was really a heartfelt situation for me when you brought me a gift on my birthday. 🎂<br>
+                            I rarely show much emotions and feelings on my face but it really made me feel special.
+                            ✨<br>
+                            I was so happy and excited to get a gift from you. 🤗<br>
+                            Thanks a lottt for all of your help, support and being a good friend of mine. 🙏</p>
+
+                        <p class="signature">~ Your friend Vikrant</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Added arrow-btn class to make it consistent with the Next Page buttons -->
+    <button class="open-card-btn arrow-btn">Open Card</button>
+    <script src="js/main.js"></script>
+    <script src="js/apology.js"></script>
+</body>
+
+</html>
